@@ -4,5 +4,5 @@ namespace Paint_Management_System.Interfaces;
 
 public interface IBuyable
 {
-    decimal GetFinalPrice();
+    decimal GetFinalPrice(decimal originalPrice);
 }
