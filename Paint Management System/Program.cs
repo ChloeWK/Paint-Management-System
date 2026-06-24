@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System;
 using System.Drawing;
 using System.Security.Cryptography;
 using Paint_Management_System.Models;
@@ -13,8 +14,11 @@ namespace Paint_Management_System
 {
     public class Program
     {
-        private static List<PaintProduct> allProducts = new List<PaintProduct>();
-        private static List<Orders> allOrders = new List<Orders>();
+        public static List<PaintProduct> allProducts = new List<PaintProduct>();
+        public static List<Order> allOrders = new List<Order>();
+        public static List<User> allUsers = new List<User>();
+
+
 
         static void Main()
         {
@@ -22,6 +26,31 @@ namespace Paint_Management_System
             DisplayAllProducts();
             CreateSampleOrders();
             DisplayAllOrders();
+                    
+            Order expensive = Order.GetMostExpensivePaintProduct(allOrders);
+
+
+            int inputOrderId;
+            int inputProductId;
+            bool isSuccess = false;
+            bool isSuccessCheck = false;
+            while (!isSuccess && !isSuccessCheck)
+            {
+                Console.WriteLine("Input the Order ID that you want to change:");
+                string inputOrder = Console.ReadLine();
+                isSuccessCheck = int.TryParse(inputOrder, out inputOrderId);
+
+
+                Console.WriteLine("Input the product ID that you want to remove:");
+                string inputProduct = Console.ReadLine();
+                isSuccess = int.TryParse(inputProduct, out inputProductId);
+
+                if (!isSuccess && !isSuccessCheck)
+                {
+                    Console.WriteLine("Wrong Input! Must be a number.");
+                }
+                Order removePaint = Order.RemovePaintProduct(inputOrderId,inputOrderId, allOrders);
+            }
         }
 
         private static void CreateDefaultProducts()
@@ -30,6 +59,7 @@ namespace Paint_Management_System
             (
                 new PaintProduct
                     (
+                        1,
                         "p1",
                         (PaintTypes)1,
                         new PaintSpecification("red", 1),
@@ -41,6 +71,7 @@ namespace Paint_Management_System
             allProducts.Add(
                 new PaintProduct
                 (
+                    2,
                     "p2",
                     (PaintTypes)2,
                     new PaintSpecification("white", 1),
@@ -52,6 +83,7 @@ namespace Paint_Management_System
             allProducts.Add(
                 new PaintProduct
                 (
+                    3,
                     "p3",
                     (PaintTypes)3,
                     new PaintSpecification("white", 1),
@@ -63,6 +95,7 @@ namespace Paint_Management_System
             allProducts.Add(
                 new PaintProduct
                 (
+                    4,
                     "p4",
                     (PaintTypes)3,
                     new PaintSpecification("green", 1),
@@ -76,14 +109,33 @@ namespace Paint_Management_System
         {
             allOrders.Add
             (
-                new Orders
+                new Order
                 (
+                    1,
                     new PaintProduct
                     (
-                        "p4",
-                        (PaintTypes)3,
-                        new PaintSpecification("green", 1),
-                        250.00m
+                        1,
+                        "p1",
+                        (PaintTypes)1,
+                        new PaintSpecification("red", 1),
+                        100.00m
+                    ),
+                    4
+                )
+            );
+
+            allOrders.Add
+            (
+                new Order
+                (
+                    2,
+                    new PaintProduct
+                    (
+                        2,
+                        "p2",
+                        (PaintTypes)2,
+                        new PaintSpecification("white", 1),
+                        150.00m
                     ),
                     4
                 )
@@ -105,7 +157,7 @@ namespace Paint_Management_System
         private static void DisplayAllOrders()
         {
             Console.WriteLine("--------Order List--------");
-            foreach (Orders order in allOrders)
+            foreach (Order order in allOrders)
             {
                 order.DisplayOrder();
                 order.GetTotalPrice();

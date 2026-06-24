@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paint Management System", "Paint Management System\Paint Management System.csproj", "{B216D029-FBF2-4640-8C2A-194E821C1DC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintStore.API", "PaintStore.API\PaintStore.API.csproj", "{86FCA5C2-1371-43F8-AAFD-11702A8B0757}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintStore.Models", "PaintStore.Models\PaintStore.Models.csproj", "{F4143770-46F1-4D5F-86B2-B5DF67104A9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,13 @@ Global
 		{B216D029-FBF2-4640-8C2A-194E821C1DC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B216D029-FBF2-4640-8C2A-194E821C1DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B216D029-FBF2-4640-8C2A-194E821C1DC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86FCA5C2-1371-43F8-AAFD-11702A8B0757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86FCA5C2-1371-43F8-AAFD-11702A8B0757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86FCA5C2-1371-43F8-AAFD-11702A8B0757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86FCA5C2-1371-43F8-AAFD-11702A8B0757}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4143770-46F1-4D5F-86B2-B5DF67104A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4143770-46F1-4D5F-86B2-B5DF67104A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4143770-46F1-4D5F-86B2-B5DF67104A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4143770-46F1-4D5F-86B2-B5DF67104A9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
