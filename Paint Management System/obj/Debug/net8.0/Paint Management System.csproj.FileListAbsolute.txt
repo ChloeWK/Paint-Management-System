@@ -1,0 +1,15 @@
+C:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Paint-Management-System\Paint Management System\bin\Debug\net8.0\Paint Management System.exe
+C:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Paint-Management-System\Paint Management System\bin\Debug\net8.0\Paint Management System.deps.json
+C:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Paint-Management-System\Paint Management System\bin\Debug\net8.0\Paint Management System.runtimeconfig.json
+C:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Paint-Management-System\Paint Management System\bin\Debug\net8.0\Paint Management System.dll
+C:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Paint-Management-System\Paint Management System\bin\Debug\net8.0\Paint Management System.pdb
+C:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Paint-Management-System\Paint Management System\obj\Debug\net8.0\Paint Management System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Paint-Management-System\Paint Management System\obj\Debug\net8.0\Paint Management System.AssemblyInfoInputs.cache
+C:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Paint-Management-System\Paint Management System\obj\Debug\net8.0\Paint Management System.AssemblyInfo.cs
+C:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Paint-Management-System\Paint Management System\obj\Debug\net8.0\Paint Management System.csproj.CoreCompileInputs.cache
+C:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Paint-Management-System\Paint Management System\obj\Debug\net8.0\Paint Management System.sourcelink.json
+C:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Paint-Management-System\Paint Management System\obj\Debug\net8.0\Paint Management System.dll
+C:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Paint-Management-System\Paint Management System\obj\Debug\net8.0\refint\Paint Management System.dll
+C:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Paint-Management-System\Paint Management System\obj\Debug\net8.0\Paint Management System.pdb
+C:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Paint-Management-System\Paint Management System\obj\Debug\net8.0\Paint Management System.genruntimeconfig.cache
+C:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Paint-Management-System\Paint Management System\obj\Debug\net8.0\ref\Paint Management System.dll
