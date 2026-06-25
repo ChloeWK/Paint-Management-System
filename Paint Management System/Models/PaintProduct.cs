@@ -1,4 +1,5 @@
 using System;
+using System.Dynamic;
 using Paint_Management_System.Enumerations;
 using Paint_Management_System.Interfaces;
 
@@ -45,6 +46,45 @@ public class PaintProduct : IBuyable
         Console.WriteLine($"Discount: {DefaultDiscount}");
     }
 
-    
+    public static List<PaintProduct> GetSpecificPaintProduct(List<PaintProduct> allProducts)
+    {
+        if (allProducts == null)
+        {
+            throw new Exception("There is no any product!");
+        }
+
+        return allProducts.Where(p => p.Price > 100.00m && p.Price < 150.00m).ToList();
+    }
+
+    public static void GetTotalPriceByPaintType(List<PaintProduct> allProducts)
+    {
+        if (allProducts == null)
+        {
+            throw new Exception("There is no any product!");
+        }
+        decimal totalPriceByType1 = 0m;
+        decimal totalPriceByType2 = 0m;
+        decimal totalPriceByType3 = 0m;
+        foreach (PaintProduct product in allProducts)
+        {
+            switch (product.Type)
+            {
+                case PaintTypes.BaseCoat:
+                    totalPriceByType1 += product.Price;
+                    break;
+
+                case PaintTypes.Glossy:
+                    totalPriceByType2 += product.Price;
+                    break;
+
+                case PaintTypes.Matte:
+                    totalPriceByType3 += product.Price;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    }
 
 }

@@ -4,14 +4,14 @@ namespace Paint_Management_System.Models;
 
 public class User
 {
+    public int UserId { get; set; }
     public string UserName { get; set; }
-    public int UserAge { get; set; }
     private string Street { get; set; }
 
-    public User(string userNmae, int userAge, string streetName)
+    public User(int userId, string userName, string streetName)
     {
-        UserName = UserName;
-        UserAge = userAge;
+        UserId = userId;
+        UserName = userName;
         Street = streetName;
     }
 
@@ -27,15 +27,20 @@ public class User
 
     public void DisplayUserInfo()
     {
-        Console.WriteLine($"User Name: {UserName}, User Age: {UserAge}");
+        Console.WriteLine($"User ID: {UserId}User Name: {UserName}");
     }
 
-    public void UpdateUserInfo(string name, int age)
+    public void UpdateUserInfo(List<User> allUsers, int id, string name)
     {
-        UserName = name;
-        UserAge = age;
+        foreach (User user in allUsers)
+        {
+            if (id == user.UserId)
+            {
+                UserName = name;
+            }
+        }
     }
-    
+
     public List<Order> orderHistory;
     public List<Payment> paymentHistory;
 }

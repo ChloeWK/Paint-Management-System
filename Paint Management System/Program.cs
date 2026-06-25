@@ -17,6 +17,7 @@ namespace Paint_Management_System
         public static List<PaintProduct> allProducts = new List<PaintProduct>();
         public static List<Order> allOrders = new List<Order>();
         public static List<User> allUsers = new List<User>();
+        public static List<Payment> allPayments = new List<Payment>();
 
 
 
@@ -26,31 +27,9 @@ namespace Paint_Management_System
             DisplayAllProducts();
             CreateSampleOrders();
             DisplayAllOrders();
-                    
             Order expensive = Order.GetMostExpensivePaintProduct(allOrders);
+            RemoveProductInOder();
 
-
-            int inputOrderId;
-            int inputProductId;
-            bool isSuccess = false;
-            bool isSuccessCheck = false;
-            while (!isSuccess && !isSuccessCheck)
-            {
-                Console.WriteLine("Input the Order ID that you want to change:");
-                string inputOrder = Console.ReadLine();
-                isSuccessCheck = int.TryParse(inputOrder, out inputOrderId);
-
-
-                Console.WriteLine("Input the product ID that you want to remove:");
-                string inputProduct = Console.ReadLine();
-                isSuccess = int.TryParse(inputProduct, out inputProductId);
-
-                if (!isSuccess && !isSuccessCheck)
-                {
-                    Console.WriteLine("Wrong Input! Must be a number.");
-                }
-                Order removePaint = Order.RemovePaintProduct(inputOrderId,inputOrderId, allOrders);
-            }
         }
 
         private static void CreateDefaultProducts()
@@ -120,7 +99,13 @@ namespace Paint_Management_System
                         new PaintSpecification("red", 1),
                         100.00m
                     ),
-                    4
+                    4,
+                    new User
+                    (
+                        1,
+                        "Scott",
+                        "Walnut Ave"
+                    )
                 )
             );
 
@@ -137,7 +122,13 @@ namespace Paint_Management_System
                         new PaintSpecification("white", 1),
                         150.00m
                     ),
-                    4
+                    2,
+                    new User
+                    (
+                        1,
+                        "Chloe",
+                        "Constitution Rd"
+                    )
                 )
             );
         }
@@ -164,6 +155,32 @@ namespace Paint_Management_System
                 Console.WriteLine(" ");
             }
 
+        }
+
+
+        private static void RemoveProductInOder()
+        {
+            int inputOrderId;
+            int inputProductId;
+            bool isSuccess = false;
+            bool isSuccessCheck = false;
+            while (!isSuccess && !isSuccessCheck)
+            {
+                Console.WriteLine("Input the Order ID that you want to change:");
+                string inputOrder = Console.ReadLine();
+                isSuccessCheck = int.TryParse(inputOrder, out inputOrderId);
+
+
+                Console.WriteLine("Input the product ID that you want to remove:");
+                string inputProduct = Console.ReadLine();
+                isSuccess = int.TryParse(inputProduct, out inputProductId);
+
+                if (!isSuccess && !isSuccessCheck)
+                {
+                    Console.WriteLine("Wrong Input! Must be a number.");
+                }
+                Order.RemovePaintProduct(inputOrderId,inputOrderId, allOrders);
+            }
         }
 
 

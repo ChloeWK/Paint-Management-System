@@ -10,8 +10,9 @@ public class Order
     public int Quantity { get; set; }
     public decimal TotalPrice { get; set; }
     public int OrderId { get; set; }
+    public User User { get; set; }
 
-    public Order(int orderId, PaintProduct product, int quantity)
+    public Order(int orderId, PaintProduct product, int quantity, User user)
     {
         if (quantity <= 0)
         {
@@ -22,6 +23,7 @@ public class Order
         OrderId = orderId;
         Product = product;
         Quantity = quantity;
+        User = user;
         TotalPrice = Product.GetFinalPrice(Product.Price) * (decimal)quantity;
     }
 
@@ -57,9 +59,9 @@ public class Order
         return mostExpensiveOrder;
     }
 
-    public static Order RemovePaintProduct(int orderId, int productId, List<Order> allOrders)
+    public static void RemovePaintProduct(int orderId, int productId, List<Order> allOrders)
     {
-        Order removeOrder = null;
+        //Order removeOrder = null;
 
         int deleteCount = Program.allOrders.RemoveAll(order => order.OrderId == orderId && productId == order.Product.ProductId);
         if (deleteCount > 0)
@@ -68,8 +70,36 @@ public class Order
         }
         else { Console.WriteLine("Your Input ID dosen't exist!"); }
 
+    }
 
-        return removeOrder;
+    public static Order GetMostExpensiveOrder(List<Order> allOrders)
+    {
+        Order mostExpensiveOrder = null;
+        decimal expensivePrice = 0m;
+        foreach (Order order in allOrders)
+        {
+            if (order.TotalPrice > expensivePrice)
+            {
+                expensivePrice = order.TotalPrice;
+                mostExpensiveOrder = order;
+            }
+        }
+        return mostExpensiveOrder;
+    }
+    
+    public static Order GetLatestOrder(List<Order> allOrders)
+    {
+        Order latestOrder = null;
+        DateTime latestTime = DateTime.MinValue;
+        foreach (Order order in allOrders)
+        {
+            if (order.CreateAt > latestTime)
+            {
+                latestTime = order.CreateAt;
+                latestOrder = order;
+            }
+        }
+        return latestOrder; 
     }
 
 }
