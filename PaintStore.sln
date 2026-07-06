@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintStore.Models", "PaintStore.Models\PaintStore.Models.csproj", "{AB986201-A721-489C-8145-CED1B250AD01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaintStore.API", "PaintStore.API\PaintStore.API.csproj", "{062833A2-6796-4823-B40D-41EB6A1C4E28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB986201-A721-489C-8145-CED1B250AD01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB986201-A721-489C-8145-CED1B250AD01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB986201-A721-489C-8145-CED1B250AD01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB986201-A721-489C-8145-CED1B250AD01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{062833A2-6796-4823-B40D-41EB6A1C4E28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{062833A2-6796-4823-B40D-41EB6A1C4E28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{062833A2-6796-4823-B40D-41EB6A1C4E28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{062833A2-6796-4823-B40D-41EB6A1C4E28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

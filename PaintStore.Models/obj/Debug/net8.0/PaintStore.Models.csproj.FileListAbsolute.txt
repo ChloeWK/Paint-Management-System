@@ -1,0 +1,11 @@
+c:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Week2\PaintStore.Models\bin\Debug\net8.0\PaintStore.Models.deps.json
+c:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Week2\PaintStore.Models\bin\Debug\net8.0\PaintStore.Models.dll
+c:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Week2\PaintStore.Models\bin\Debug\net8.0\PaintStore.Models.pdb
+c:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Week2\PaintStore.Models\obj\Debug\net8.0\PaintStore.Models.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Week2\PaintStore.Models\obj\Debug\net8.0\PaintStore.Models.AssemblyInfoInputs.cache
+c:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Week2\PaintStore.Models\obj\Debug\net8.0\PaintStore.Models.AssemblyInfo.cs
+c:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Week2\PaintStore.Models\obj\Debug\net8.0\PaintStore.Models.csproj.CoreCompileInputs.cache
+c:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Week2\PaintStore.Models\obj\Debug\net8.0\PaintStore.Models.dll
+c:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Week2\PaintStore.Models\obj\Debug\net8.0\refint\PaintStore.Models.dll
+c:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Week2\PaintStore.Models\obj\Debug\net8.0\PaintStore.Models.pdb
+c:\Users\wkdxy\OneDrive\Desktop\csharp\Homework\Week2\PaintStore.Models\obj\Debug\net8.0\ref\PaintStore.Models.dll
